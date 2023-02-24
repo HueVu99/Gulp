@@ -1,0 +1,133 @@
+@use "sass:math";
+
+// Breakpoint
+@mixin xl {
+    @media screen and (min-width: #{$xl-width}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (min-width: #{$lg-width}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (min-width: #{$md-width}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (min-width: #{$sm-width}) {
+        @content;
+    }
+}
+
+// convert px to rem
+// ---------------------------
+@function calculateRem($size) {
+    $remSize: math.div($size, 16px);
+    @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+    // font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+}
+
+@mixin custom-placeholder() {
+	&::-moz-placeholder {
+        @content;
+    }
+	&:-ms-input-placeholder {
+        @content;
+    }
+	&::-webkit-input-placeholder {
+        @content;
+    }
+    &::placeholder {
+        @content;
+    }
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, black, 70%)) {
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba($foreground-color, 0.5);
+        // border-radius: $global-margin / 2;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $white;
+        background: rgba($foreground-color, 0.1);
+    }
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot ttf svg woff woff2, $display: swap) { // to do woff woff2
+	$src: null;
+
+	$extmods: (
+		eot: "?#iefix",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+    eot: "embedded-opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+        font-display: $display;
+	}
+}
+
+@mixin property($prop, $value) {
+    @if isNotEmpty($value) {
+      #{$prop}: $value;
+    }
+}
+
+@mixin propertyBreakpoint($breakpoint, $prop, $value) {
+    @if isNotEmpty($value) {
+        @if ($breakpoint=='xl') {
+            @include xl {
+                #{$prop}: $value;
+            }
+        }
+        @else if ($breakpoint=='lg') {
+            @include lg {
+                #{$prop}: $value;
+            }
+        }
+        @else if ($breakpoint=='md') {
+            @include md {
+                #{$prop}: $value;
+            }
+        }
+        @else if ($breakpoint=='sm') {
+            @include sm {
+                #{$prop}: $value;
+            }
+        }
+    }
+}

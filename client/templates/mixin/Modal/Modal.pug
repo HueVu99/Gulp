@@ -1,0 +1,18 @@
+mixin modal(modalId, cusClass)
+  .modal.js_modal(id=modalId class=cusClass)&attributes(attributes)
+    .modal-inner
+      block
+
+mixin modalHeader(title)
+  .modal__header&attributes(attributes)
+    h5.modal__title.js_modal__title=title
+    span.icon__cross.js-close-modal
+
+mixin modalBody
+  .modal__body&attributes(attributes)
+    block
+
+mixin modalFooter
+  .modal__footer&attributes(attributes)
+    block
+

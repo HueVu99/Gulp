@@ -1,0 +1,104 @@
+@import "./card";
+$product: ".c_product";
+
+#{$product} {
+    &__code {
+        white-space: nowrap;
+    }
+    &__number {
+        white-space: nowrap;
+    }
+    &__serial {
+        white-space: nowrap;
+    }
+    .c_card__content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &-info {
+        border-bottom: $border__color solid 1px;
+        display: none;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        padding-bottom: 25px;
+        text-align: center;
+
+        &#{$product}--active {
+            display: block;
+        }
+        @include md {   
+            border-bottom: none;
+            display: block;
+            // margin-top: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .c_card__content {
+            display: inline-block;
+            max-width: 100%;
+            text-align: left;
+            // @include xl {
+            //     padding-left: 40px;
+            //     padding-right: 40px;
+            // }
+            html[dir="rtl"] & {
+                text-align: right;
+            }
+        }
+    }
+    &-complete {
+        .c_card__content {
+            margin-bottom: 0;
+            // @include xl {
+            //     padding-left: 40px;
+            //     padding-right: 40px;
+            // }
+        }
+    }
+    &-search {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: $border__color solid 1px;
+    }
+    &__address {
+        display: flex;
+        #{$product}__row-label {
+            margin-right: 4px;
+        }
+    }
+    &__email {
+        word-break: break-all;
+    }
+    &__email,
+    &__client-name,
+    &__date-purchase,
+    &__address,
+    &__code,
+    &__number,
+    &__serial {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        html[dir="rtl"] & {
+            display: flex;
+            > span {
+                margin-left: 3px;
+            }
+        }
+    }
+    &.text-center {
+        #{$product}__email,
+        #{$product}__client-name,
+        #{$product}__date-purchase,
+        #{$product}__address,
+        #{$product}__code,
+        #{$product}__number,
+        #{$product}__serial {
+            html[dir="rtl"] & {
+                justify-content: center;
+            }
+        }
+    }
+}

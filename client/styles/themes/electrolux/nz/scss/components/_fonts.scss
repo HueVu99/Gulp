@@ -1,0 +1,36 @@
+// Web fonts
+// --------------------------------------------------
+$font-path: "/dist/ProductRegistration/electrolux/nz/assets/fonts/ElectroluxSans/" !default;;
+@font-face {
+  font-family: "Electrolux Sans";
+  src: url("#{$font-path}ElectroluxSans_3_Regular.eot");
+  src: local("☺"), url("#{$font-path}ElectroluxSans_3_Regular.woff2") format("woff2"), url("#{$font-path}ElectroluxSans_3_Regular.woff") format("woff"), url("#{$font-path}ElectroluxSans_3_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+// @font-face {
+// 	font-family: "Electrolux Sans Bold";
+// 	src: url(' @{fontsPath}ElectroluxSans_5_Bold.eot');
+// 	src: local('☺'), url(' @{fontsPath}ElectroluxSans_5_Bold.woff') format('woff'), url(' #{$font-path}ElectroluxSans_5_Bold.ttf') format('truetype'), url('#{$font-path}ElectroluxSans_5_Bold.svg') format('svg');
+// 	font-weight: 700;
+// 	font-style: normal;
+// }
+
+@font-face {
+  font-family: "Electrolux Sans";
+  src: url("#{$font-path}ElectroluxSans_4_Semibold.eot");
+  src: local("☺"), url("#{$font-path}ElectroluxSans_4_Semibold.woff2") format("woff2"), url("#{$font-path}ElectroluxSans_4_Semibold.woff") format("woff"), url("#{$font-path}ElectroluxSans_4_Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+// @font-face {
+// 	font-family: "Electrolux Sans Light";;
+// 	src: url(' #{$font-path}ElectroluxSans_2_Light.eot');
+// 	src: local('☺'), url('#{$font-path}ElectroluxSans_2_Light.woff') format('woff'), url('#{$font-path}ElectroluxSans_2_Light.ttf') format('truetype'), url('#{$font-path}ElectroluxSans_2_Light.svg') format('svg');
+// 	font-weight: 300;
+// 	font-style: normal;
+// }

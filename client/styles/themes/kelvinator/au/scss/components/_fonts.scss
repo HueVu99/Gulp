@@ -1,0 +1,5 @@
+// Web fonts
+// --------------------------------------------------
+$font-path: "/dist/ProductRegistration/kelvinator/au/assets/fonts/Avenir/" !default;
+@include font-face($font-base, $font-path + "Avenir-Roman", 400, normal, eot woff2 woff ttf svg);
+@include font-face($font-base, $font-path + "Avenir-Heavy", 600, normal, eot woff2 woff ttf svg);

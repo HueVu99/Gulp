@@ -1,0 +1,116 @@
+@import "../utils/mixins";
+$btn: '.c_btn';
+#{$btn} {
+    font-size: $btn__font-size;
+    padding: 0.8125rem 1.25rem;
+    display: inline-block;
+    border: $btn__border-color solid $btn__border-width;
+    border-radius: $btn__border-radius;
+    transition: $transition-base;
+    text-transform: $btn__text-transform;
+    font-weight: $btn__font-weight;
+    color: $color__base;
+
+    &#{$btn}--primary {
+        background-color: $color__btn--primary;
+        color: #fff;
+        border-color: $color__btn--primary;
+        &:not(:disabled),
+        &:not(.disabled) {
+            &:focus,
+            &:active,
+            &.active {
+                
+            }
+            &:hover {
+                background-color: $color__btn--hover;
+                color: #fff;
+                border-color: $color__btn--hover;
+            }
+        }
+
+        .c_icon--spinner {
+            fill: #fff;
+            width: 15px;
+            height: 15px;
+            vertical-align: top;
+        }
+    }
+    &#{$btn}--block {
+        display: block;
+        width: 100%;
+    }
+    &#{$btn}--back {
+        padding: 0 0 0 15px;
+        position: relative;
+        background-color: transparent;
+        border: none;
+        text-transform: none;
+        line-height: 1;
+
+        &:hover{
+            color: $link__hover-color;
+            @include property("opacity", $link__hover-opacity);
+            &::after {
+                border-left-color: $link__hover-color;
+                border-bottom-color: $link__hover-color;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-left: $color__base solid 2px;
+            border-bottom: $color__base solid 2px;
+            transform: rotate(45deg);
+            left: 0;
+            top: 2.5px;
+        }
+    }
+
+    &#{$btn}--link {
+        padding: 0;
+        background-color: transparent;
+        border: none;  
+        text-transform: none; 
+        text-decoration: underline;
+        &:not(:disabled),
+        &:not(.disabled) {
+            @include md {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &#{$btn}--outline-primary {
+        background-color: #fff;
+        border-color: $color__primary;
+        color: $color__primary;
+        &:not(:disabled),
+        &:not(.disabled) {
+            &:focus,
+            &:active,
+            &.active,
+            &:hover {
+                background-color: $color__primary;
+                color: #fff;
+            }
+        }
+    }
+}
+a,
+button {
+    &#{$btn} {
+        cursor: pointer;
+    }
+    &#{$btn}--disabled,
+    &.disabled,
+    &:disabled {
+        cursor: default;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}

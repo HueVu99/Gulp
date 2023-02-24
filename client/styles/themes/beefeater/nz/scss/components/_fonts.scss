@@ -1,0 +1,6 @@
+// Web fonts
+// --------------------------------------------------
+$font-path: "/dist/ProductRegistration/beefeater/nz/assets/fonts/" !default;
+@include font-face($font-base, $font-path + "MuchoSans/MuchoSans", 500, normal, eot woff2 woff ttf);
+// @include font-face($font-base, $font-path + "MuchoSans/MuchoSans", 500, normal, eot woff2 woff ttf);
+@include font-face($heading__font, $font-path + "AlternateGotNo2D/AlternateGotNo2D", 500, normal, eot woff2 woff ttf svg);

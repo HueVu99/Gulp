@@ -1,0 +1,65 @@
+$dropdown: ".dropdown";
+$svg-arrow:'<svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7.60242 7L14 1" stroke="#{$color__base}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+#{$dropdown} {
+    display: inline-block;
+    position: relative;
+    border-bottom: $border--color solid 1px;
+    
+    &:hover {
+        .dropdown__menu {
+            display: block;
+        }
+    }
+
+    &__toggle {
+        cursor: pointer;
+        padding-right: 15px;
+        position: relative;
+
+        &::after {
+            @include background-svg($svg-arrow);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 9px 6px;
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            width: 8px;
+            height: 5px;
+        }
+    }
+
+    &__menu {
+        border: $border--color solid 1px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        padding: .5rem 0;
+        display: none;
+        background-color: #fff;
+    }
+    &__item {
+        display: block;
+        width: 100%;
+        padding: .25rem 1rem;
+        clear: both;
+        font-weight: 400;
+        text-decoration: none;
+        white-space: nowrap;
+        color: $color__base;
+
+        &:hover {
+            background-color: $color__primary--tint;
+        }
+    }
+
+    &#{$dropdown}--right {
+        #{$dropdown}__menu {
+            left: auto;
+            right: 0;
+        }
+    }
+}

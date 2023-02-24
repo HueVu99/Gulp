@@ -1,0 +1,20 @@
+.header {
+  padding: $header__padding-y 0;
+  @include property("background-color", $bg__header-color);
+}
+.navbar-brand {
+  font-size: $header-logo__height;
+  line-height: 1;
+  margin-bottom: 0;
+  > a {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.logo {
+  img {
+    vertical-align: top;
+    height: $header-logo__height;
+    width: $header-logo__width;
+  }
+}

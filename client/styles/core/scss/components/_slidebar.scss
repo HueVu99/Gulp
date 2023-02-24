@@ -1,0 +1,107 @@
+$c_slidebar: ".c_slidebar";
+
+#{$c_slidebar} {
+    position: fixed;
+    width: 510px;
+    max-width: 100%;
+    // height: 100%;
+    right: -200%;
+    top: 60px;
+    bottom: 0;
+    // overflow: auto;
+    transition: $transition-base;
+    z-index: $slidebar-index;
+    background-color: $slidebar__background-color;
+    @include md {
+        top: 0;
+    }
+    &-wrap {
+        .c_howdo__help-text {
+            background-color: $slidebar__help-text__background-color;
+            padding: 20px;
+            color: $slidebar__help-text-color;
+        }
+    }
+    &--show {
+        right: 0;
+
+        &~ {
+            #{$c_slidebar}-backdrop {
+                z-index: $slidebar-backdrop-index;
+                opacity: 1;
+                display: block;
+            }
+        }
+    }
+    &__close {
+        position: absolute;
+        left: 0;
+        top: -60px;
+        width: 60px;
+        height: 60px;
+        background-color: $slidebar__close__background-color;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+
+        @include md {
+            top: 0;
+            left: -60px;
+        }
+        
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            border-bottom: #fff solid 2px;
+            width: 24px;
+            left: 18px;
+            top: 50%;
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            background-color: $slidebar__close__background-color--hover;
+            // &::after,
+            // &::before {
+            //     border-bottom-color: #fff;
+            // }
+        }
+
+        span {
+            display: none;
+        }
+    }
+
+    &__content {
+        padding: 30px 15px;
+        max-height: 100%;
+        overflow: auto;
+
+        @include md {
+            padding: 40px 25px;
+        }
+    }
+
+    &-backdrop {
+        background-color: rgba($color: #000, $alpha: 0.7);
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        z-index: $invisible-index;
+        transition: $transition-base;
+        opacity: 0;
+        display: none;
+    }
+    
+    &-opened {
+        overflow: hidden;
+        height: 100%;
+    }
+}

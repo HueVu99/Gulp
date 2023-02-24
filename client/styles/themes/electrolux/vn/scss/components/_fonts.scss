@@ -1,0 +1,23 @@
+// Web fonts
+// --------------------------------------------------
+$font-path: "/dist/ProductRegistration/electrolux/vn/assets/fonts/ElectroluxSans/" !default;
+@include font-face($font-base, $font-path + "ElectroluxSansVN-DemiBold", 600, normal, eot woff2 woff ttf);
+@include font-face($font-base, $font-path + "ElectroluxSansVN-Regular", 400, normal, eot woff2 woff ttf);
+
+@font-face {
+    font-family: "Electrolux Sans";
+    src: url("#{$font-path}ElectroluxSans_3_Regular.eot");
+    src: local("☺"), url("#{$font-path}ElectroluxSans_3_Regular.woff2") format("woff2"), url("#{$font-path}ElectroluxSans_3_Regular.woff") format("woff"), url("#{$font-path}ElectroluxSans_3_Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Electrolux Sans";
+    src: url("#{$font-path}ElectroluxSans_4_Semibold.eot");
+    src: local("☺"), url("#{$font-path}ElectroluxSans_4_Semibold.woff2") format("woff2"), url("#{$font-path}ElectroluxSans_4_Semibold.woff") format("woff"), url("#{$font-path}ElectroluxSans_4_Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

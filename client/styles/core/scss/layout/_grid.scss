@@ -1,0 +1,50 @@
+@use "sass:math";
+.container {
+  max-width: $container__width;
+  margin: 0 auto;
+  padding-left: $container__padding-x;
+  padding-right: $container__padding-x;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$container__padding-x;
+  margin-right: -$container__padding-x;
+}
+[class*="col-"] {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-left: $container__padding-x;
+  padding-right: $container__padding-x;
+}
+@include md {
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+$grid-columns: 12;
+@for $i from 1 through $grid-columns {
+  $max-width: percentage(math.div($i, $grid-columns));
+  .col-#{$i} {
+    flex: 0 0 $max-width;
+    max-width: $max-width;
+  }
+  .offset-#{$i} {
+    margin-left: $max-width;
+  }
+}
+
+@include md {
+  @for $i from 1 through $grid-columns {
+    $max-width: percentage(math.div($i, $grid-columns));
+    .col-md-#{$i} {
+      flex: 0 0 $max-width;
+      max-width: $max-width;
+    }
+    .offset-md-#{$i} {
+      margin-left: $max-width;
+    }
+  }
+}

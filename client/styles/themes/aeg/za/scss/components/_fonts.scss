@@ -1,0 +1,6 @@
+// Web fonts
+// --------------------------------------------------
+$font-path: "/dist/ProductRegistration/aeg/za/assets/fonts/MetricWeb/" !default;
+@include font-face($font-base, $font-path + "MetricWeb-Semibold", 600, normal, eot woff2 woff ttf svg, fallback);
+@include font-face($font-base, $font-path + "MetricWeb-Regular", 400, normal, eot woff2 woff ttf svg, fallback);
+@include font-face($font-base, $font-path + "MetricWeb-Thin", 300, normal, eot woff2 woff ttf svg, fallback);

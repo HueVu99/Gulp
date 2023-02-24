@@ -1,0 +1,33 @@
+// -----------------------------
+//@import "_breakpoints";
+//@import "_mixin.scss";
+//@import "theme/westinghouse";
+//@import "reset";
+
+// theme path
+// ---------------------------
+$baseTheme: "../../base";
+$componentsTheme: "../../components";
+$settingsTheme: "../../settings";
+$utilsTheme: "../../utils";
+
+// common critical
+// -----------------------------
+@import "../../atomic/utilities";
+@import "../../base/typography";
+
+@import "../../layout/grid";
+@import "../../layout/header";
+@import "../../components/second-nav";
+@import "../../components/text-icon";
+@import "../../layout/main-body";
+@import "../../layout/navigation";
+@import "../../components/icons";
+@import "../../components/dropdown";
+@import "../../components/section";
+@import "../../components/form";
+@import "../../components/checkbox";
+@import "../../components/alternate";
+@import "../../components/country-phone";
+@import "../../components/select-box";
+@import "../../components/vue2-datepicker/index";

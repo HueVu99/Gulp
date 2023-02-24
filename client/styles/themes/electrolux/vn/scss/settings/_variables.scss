@@ -1,0 +1,199 @@
+@import "../../../../../core/scss/settings/variables";
+// overwrite variables
+$font-path: "/dist/ProductRegistration/electrolux/vn/assets/fonts/ElectroluxSans/";
+$images-path: "/dist/ProductRegistration/electrolux/vn/assets/images/";
+//main Colors --------------------------------
+$color__primary:            #011e41;
+$color__primary--mid:       #7a8a9c;// blue-mid
+$color__primary--light:     #adb9c3;// blue-light
+$color__primary--tint:      #dfe7ea;// blue-tint
+
+$color__base:               $color__primary;
+$white:                     #fff;
+
+// typography
+$font-base:                 "ElectroluxVN";
+$font-family__base:        	#{$font-base}, "Electrolux Sans", Roboto, Arial, sans-serif;
+$font-weight__base:        	400;
+$font-size__base:          	1rem;
+$small__font-size:          $font-size__base * 0.875;
+$smallest__font-size:       $font-size__base * 0.75;
+$large__font-size:          $font-size__base * 1.125;
+
+$font-weight__light:        300;
+$font-weight__medium:       500;
+$font-weight__semibold:     600;
+$font-weight__bold:         700;
+
+$font-strong__font-weight:  600;
+
+$line-height__base:         1.5;
+$line-height__small:        1.5;
+$line-height__smallest:     1.5;
+
+// Body
+$body__background-color:    #fff;
+
+// Heading
+$heading__color:            $color__primary;
+$heading__font:             $font-base;
+$heading__font-weight:      $font-weight__semibold;
+$heading__text-transform:   initial;
+$h1__line-height:           1.2;
+$h2__line-height:           1.2;
+$h3__line-height:           1.3076;
+$h4__line-height:           1.2;
+$h5__line-height:           1.5;
+$h6__line-height:           1.5;
+
+$h1__font-size:             $font-size__base * 1.75;
+$h2__font-size:             $font-size__base * 1.5;
+$h3__font-size:             $font-size__base * 1.25;
+$h4__font-size:             $font-size__base * 1;
+$h5__font-size:             $font-size__base * 0.875;
+$h6__font-size:             $font-size__base * 0.875;
+
+// Heading Tablet
+$h1-tab__font-size:         $font-size__base * 2.25;
+$h2-tab__font-size:         $font-size__base * 1.625;
+$h3-tab__font-size:         $font-size__base * 1.375;
+$h4-tab__font-size:         $font-size__base * 1.125;
+$h5-tab__font-size:         $font-size__base * 1;
+$h6-tab__font-size:         $font-size__base * 1;
+// Heading Desktop
+$h1-pc__font-size:          $font-size__base * 3.375;
+$h2-pc__font-size:          $font-size__base * 2.5;
+$h3-pc__font-size:          $font-size__base * 1.625;
+$h4-pc__font-size:          $font-size__base * 1.25;
+
+$grid-columns: 12;
+$container__padding-x:      0.9375rem;
+$container__width:          73.75rem + 2*$container__padding-x;
+
+// border
+$border__width:             1px;
+$border__radius:            3px;
+$border__color:             $color__primary--tint;
+
+// input
+$input__border-color:       $color__primary--light;
+$input__background-color:   $body__background-color;
+$input__border-width:       1px;
+$input__border-style:       solid;
+$input__padding-x:          1.25rem;
+$input__padding-y:          0.625rem;
+$input__font-size:          $font-size__base;
+$input__line-height:        $line-height__base;
+$input__color:              $color__base;
+$input__placeholder-color:  rgba($color__primary--light, 0.6);
+$input__focus__border-color:$color__primary;
+$input__focus__box-shadow  :0 0 4px 4px rgb(1 30 65 / 10%);
+$input__invalid-color:     red;
+
+//btn
+$btn__border-color:         transparent;
+$btn__border-width:         1px;
+$btn__border-radius:        2px;
+$btn__font-size:            0.875rem;
+$btn__text-transform:       uppercase;
+$btn__font-weight:          $font-weight__semibold;
+
+//checkbox
+$checkbox__border-color:  $input__border-color;
+$checkbox__background-color:#fff;
+$checkbox__checkmark__border-color:$checkbox__border-color;
+$checkbox__checkmark-after__border-color:#fff;
+$checkbox__active__border-color:$color__primary;
+$checkbox__active__background-color:$color__primary;
+
+//dropdown
+$dropdown__background-color:$body__background-color;
+
+//slidebar
+$slidebar__background-color:$body__background-color;
+$slidebar__border-color:    $color__primary--mid;
+$slidebar__close__background-color:$color__primary--mid;
+$slidebar__close__background-color--hover:$color__primary;
+$slidebar__help-text__background-color:$color__primary--tint;
+$slidebar__help-text-color: $color__base;
+//transition
+$transition-base:           all 0.3s linear 0s;
+
+//header
+$header__padding-y: 25px;
+$header-logo__width: 144px;
+$header-logo__height: 33px;
+
+//second-nav
+$second-nav__background-color:  $color__primary--tint;
+$second-nav__color:             $color__base;
+$second-nav__border-color:      $color__primary--light;
+$second-nav-item__border-color: $color__primary--light;
+
+//footer
+$footer__background-color:  $color__primary;
+$footer__border-color:      $color__primary--mid;
+$footer__border-top-color:      transparent;
+$footer__color:             #fff;
+$footer__padding-y:         2.5rem;
+
+//index
+$dropdown-index:            100;
+$invisible-index:           -999;
+$slidebar-backdrop-index:   1000;
+$slidebar-index:            $slidebar-backdrop-index + 1;
+
+//background button hover 
+$color__btn--primary: $color__primary;
+$color__btn--hover: $color__primary--tint;
+
+// nav icon color
+$second-nav__icon--color: $color__base;
+
+// step color
+$step__item__height: 1.75rem;
+$step__item__border-width: 0.1875rem;
+$step__item__gap: 2.625rem;
+$step__item__bg-color: $color__primary--tint;
+$step__item--current__bg-color: $color__primary--tint;
+$step__item--passed__bg-color: $color__primary;
+$step__item--pass-border-color: $color__primary--tint;
+
+$step__number__bg-color: $color__primary--light;
+$step__number__color: #fff;
+$step__number--current__bg-color: $color__primary;
+$step__current-number-color: $step__number__color;
+$step__number--passed__color: $color__primary;
+$step__number--passed__bg-color: #fff;
+
+$step__label__color: $color__primary;
+$step__label--current__color: $color__primary;
+$step__label--passed__color: #fff;
+
+// link hover color
+$link__hover-color: $color__base;
+$link__hover-opacity: .7;
+
+//border color search result
+$border__color-search-result: $color__primary--light;
+
+// Color for Service support
+$color-border: #DFE7EA;
+$color-active-dots: #051E42;
+$color-border-dots: #7A889B;
+
+//footer link
+$footer__link--decoration: underline;
+$footer__link--color-hover: inherit;
+$footer__link--opacity: inherit;
+
+// arrow service support
+$arrow__service-color: $color__primary;
+
+//privacy policy + term and condition color
+$privacy__color: $color__base;
+// bullet
+$bullet__background-color: transparent;
+$bullet__border-color: $color__primary--mid;
+$bullet-active__background-color: $color__primary;
+$bullet-active__border-color: $color__primary;

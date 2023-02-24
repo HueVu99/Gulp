@@ -1,0 +1,19 @@
+.text-icon {
+    display: inline-flex;
+    align-items: center;
+
+    &__icon {
+        margin-right: 15px;
+        width: 24px;
+        line-height: 1;
+        > svg,
+        .c_icon-svg {
+            vertical-align: top;
+        }
+
+        html[dir="rtl"] & {
+            margin-left: 15px;
+            margin-right: 0;
+        }
+    }
+}

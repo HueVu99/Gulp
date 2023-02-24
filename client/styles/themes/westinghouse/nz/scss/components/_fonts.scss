@@ -1,0 +1,6 @@
+// Web fonts
+// --------------------------------------------------
+$font-path: "/dist/ProductRegistration/westinghouse/nz/assets/fonts/Montserrat/" !default;
+@include font-face($font-base, $font-path + "Montserrat-SemiBold", 600, normal, woff2 woff ttf svg);
+@include font-face($font-base, $font-path + "Montserrat-Regular", 400, normal, woff2 woff ttf svg);
+@include font-face($font-base, $font-path + "Montserrat-Thin", 300, normal, woff2 woff ttf svg);

@@ -1,0 +1,18 @@
+// -----------------------------
+//@import "_breakpoints";
+//@import "_mixin.scss";
+//@import "theme/westinghouse";
+//@import "reset";
+
+// theme path
+// ---------------------------
+$baseTheme : '../../base';
+$componentsTheme : '../../components';
+$settingsTheme : '../../settings';
+$utilsTheme : '../../utils';
+
+// common critical
+// -----------------------------
+@import "../../utils/functions";
+@import "../../utils/mixins";
+@import "../../base/reset";

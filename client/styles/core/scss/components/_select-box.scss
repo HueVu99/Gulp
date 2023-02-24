@@ -1,0 +1,86 @@
+$block: '.c_select-box';
+$selectBoxBorderColor: $input__border-color;
+
+#{$block} {
+  position: relative;
+  line-height: 1.5;
+  height: 42px;
+  &__btn {
+    position: relative;
+    padding: $input__padding-y 33px $input__padding-y $input__padding-x;
+    background-color: $input__background-color;
+    border: solid 1px $selectBoxBorderColor;
+    cursor: pointer;
+    line-height: 1.5;
+    min-width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    color: $input__color;
+
+    html[dir="rtl"] & {
+      padding: $input__padding-y $input__padding-x $input__padding-y 40px;
+    }
+    @include md {
+      min-width: 200px;
+    }
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: $input__padding-x;
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-top: solid 2px ;
+      border-right: solid 2px;
+      transition: all .35s;
+      transform: rotate(135deg) translate(-7px, 4px);
+
+      html[dir="rtl"] & {
+        left: $input__padding-x;
+        right: auto;
+      }
+    }
+    &.disabled,
+    &:disabled {
+      &:after {
+        content: unset;
+      }
+    }
+  }
+  &__popup {
+    max-height: 400px;
+    width: 100%;
+    overflow-y: auto;
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    display: none;
+    background-color: $input__background-color;
+    z-index: 2;
+    box-shadow: 4px 4px 4px 2px rgb(0 0 0 / 10%);
+    border: solid 1px $selectBoxBorderColor;
+    border-top: none;
+    padding: 8px;
+  }
+  &__option {
+    padding: 8px;
+    background-color: $input__background-color;
+    border-top: solid 1px $selectBoxBorderColor;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  &.is-active {
+    #{$block}__btn {
+      border-bottom: 0px;
+      &:after {
+        transform: rotate(-45deg) translate(2px, 0px);
+      }
+    }
+    #{$block}__popup {
+      display: block;
+    }
+  }
+}

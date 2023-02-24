@@ -1,0 +1,23 @@
+$block: '.c_alternate';
+
+#{$block} {
+  &__content {
+    overflow: hidden;
+    transition: all 0.35s;
+    height: 0px;
+    &.is-active {
+      height: auto;
+      padding-bottom: 10px;
+      overflow: visible;
+    }
+  }
+  &__title {
+    cursor: pointer;
+    display: inline-block;
+    border-bottom: solid 1px;
+  }
+  &__span {
+    width: 10px;
+    display: inline-block;
+  }
+}

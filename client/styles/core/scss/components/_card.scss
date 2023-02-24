@@ -1,0 +1,79 @@
+$card: ".c_card";
+
+#{$card} {
+    position: relative;
+    margin-bottom: 20px;
+    &__img {
+        margin-bottom: 15px;
+        text-align: center;
+        @include md {
+            margin-bottom: 20px;
+        }
+        &#{$card}__img--255 {
+            > img {
+                width: 120px;
+                height: 120px;
+                @include md {
+                    width: 255px;
+                    height: 255px;
+                }
+            }
+        }
+    }
+
+    &__content {
+        padding: 0 15px 10px;
+        // margin-bottom: 10px;
+        &:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        & + #{$card}__content {
+            border-top: $border__color solid 1px;
+            padding-top: 10px;
+        }
+        @include md {
+            padding-bottom: 20px;
+            & + #{$card}__content {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    &__title {
+        @include font-size(18px);
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__foot {
+        
+    }
+    &__control-top {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__remove {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+            .c_icon--clear-circle {
+                background-color: $color__primary;
+                &::after,
+                &::before {
+                    border-bottom-color: #fff;
+                }
+            }
+        }
+    }
+}

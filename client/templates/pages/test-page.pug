@@ -1,0 +1,15 @@
+extends ../layout/root.pug
+block critical-css
+	//- //inject-style-critical critical/critical-home-page.css
+block module-css
+	//cssfiles:test-page.css,critical-test-page.css,test-buttons.css
+	//inject-style-modules:css
+	//endinject
+block body
+	.test-page
+		h1.test-title Test Page
+		svg(viewBox="0 0 100 100").e-icon
+			use(xlink:href="#arrow-down")
+		.test-content(data-component="testComponent,secondTestComponent")
+			button.btn.btn-primary.js_test__button(type='submit') Submit
+			button.btn.btn-primary.js_test__button-second(type='submit') Submit

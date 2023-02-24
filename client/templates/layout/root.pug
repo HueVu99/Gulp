@@ -1,0 +1,15 @@
+block page-info
+doctype html
+include ../mixin/mixinComponents.pug
+html(lang="en-AU" ontouchmove)
+	include head.pug
+	body.body(class=pageClass tabIndex=0)
+		//inject:svg
+		//endinject
+		.site-wrapper
+			include header.pug
+			main.main-body
+				block body
+			include footer.pug
+		//inject-script:js
+		//endinject

@@ -1,0 +1,124 @@
+$c_select-product: ".c_select-product";
+$c_product: ".c_product";
+
+#{$c_select-product} {
+    border-top: $border__color solid 1px;
+    border-bottom: $border__color solid 1px;
+    padding: 25px 0;
+    
+    &__form {
+        // padding: 0 15px;
+
+        a {
+            color: $color__base;
+            font-weight: $font-weight__semibold;
+            &:hover{
+                color: $link__hover-color;
+                opacity: $link__hover-opacity;
+            }
+        }
+    }
+    &__result {
+        // padding: 0 15px;
+
+        a {
+            color: $color__base;
+            font-weight: $font-weight__semibold;
+            &:hover{
+                color: $link__hover-color;
+                opacity: $link__hover-opacity;
+            }
+        }
+    }
+    &__divider {
+        border-bottom: $border__color solid 1px;
+        margin: 30px 5px;
+        position: relative;
+    }
+    &__bottom {
+        border-top: $border__color solid 1px;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    &__divider-text {
+        @include font-size(14px);
+        display: inline-block;
+        line-height: 24px;
+        background-color: $body__background-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 12px;
+        @media (min-width: 768px) {
+            &.d-md-none {
+              display: none;
+            }
+        }
+    }
+    @include md {
+        display: flex;
+        flex-wrap: wrap;
+        // min-height: 260px;
+        padding: 35px 0;        
+        position: relative;
+        &__form {
+            flex: 0 0 60%;
+            max-width: 60%;
+            order: 0;
+            padding: 0 35px;
+        }
+        &__result {
+            flex: 0 0 40%;
+            max-width: 40%;
+            order: 2;
+            padding: 0 25px;
+
+            #{$c_product} {
+                margin-bottom: 0;
+            }
+        }
+        &__divider {
+            order: 1;
+            position: absolute;
+            border-left: $border__color solid 1px;
+            top: 35px;
+            left: 60%;
+            bottom: 35px;
+            margin: 0;
+            html[dir="rtl"] & {
+                left: 40%;
+            }
+        }
+        &__divider-text {
+            @include font-size(17px);
+            margin: 0;
+        }
+    }
+    @include lg {
+        &__form {
+            padding: 0 55px;
+        }
+        &__result {
+            padding: 0 35px;
+        }
+    }
+    @include xl {
+        &__form {
+            padding: 0 125px;
+        }
+        &__result {
+            padding: 0 10px 0 75px;
+            html[dir="rtl"] & {
+                padding: 0 75px 0 10px;
+            }
+            #{$c_product} {
+                margin-right: 65px;
+                html[dir="rtl"] & {
+                    margin-right: 0;
+                    margin-left: 65px;
+                }
+            }
+        }
+    }
+}

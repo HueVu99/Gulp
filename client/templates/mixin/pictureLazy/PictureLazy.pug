@@ -1,0 +1,4 @@
+mixin PictureLazy(mainClass,imgMobile,imgDesktop)
+  picture.lazyImg(data-iesrc=imgDesktop data-alt="" class=mainClass)
+    source(srcset=imgMobile media="(max-width: 991px)")
+    source(srcset=imgDesktop)

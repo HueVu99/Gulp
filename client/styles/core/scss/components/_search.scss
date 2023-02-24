@@ -1,0 +1,140 @@
+$search: '.c_search';
+#{$search} {
+  position: relative;
+  margin-bottom: 20px;
+  &__form {
+    position: relative;
+  
+    .c_form__control {
+      padding-right: 80px;
+
+      html[dir="rtl"] & {
+        padding-left: 80px;
+        padding-right: $input__padding-x;
+      }
+    }
+    > button {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      line-height: 1;
+    }
+  }
+  &__btn {
+    position: absolute;
+    right: $input__padding-x;
+    top: 50%;
+    transform: translateY(-50%);
+
+    html[dir="rtl"] & {
+      left: $input__padding-x;
+      right: auto;
+    }
+  }
+  &__btn-clear {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    cursor: pointer;
+
+    html[dir="rtl"] & {
+      left: 50px;
+      right: auto;
+    }
+
+    > i {
+      vertical-align: top;
+    }
+
+    &:hover {
+      > i {
+        &::after,
+        &::before {
+          border-bottom-color: $color__base;
+        }
+      }
+    }
+    &--active {
+      display: block;
+    }
+  }
+  &__result {
+    display: none;
+    position: absolute;
+    z-index: $dropdown-index;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    width: 100%;
+
+    &--active {
+      display: block;
+    }
+  }
+  &__nodata {
+    padding: 0 1rem;
+  }
+  &__item-list {
+    padding: 0.5rem 0;
+    max-height: calculateRem(300px);
+    overflow-y: auto;
+    background-color: $dropdown__background-color;
+    border: 1px solid $border__color-search-result;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.07);
+    border-radius: 2px;
+
+    @include scrollbars(6px, $color__primary);
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    position: relative;
+    cursor: pointer;
+
+    &:hover,
+    &--active {
+      background-color: $color__primary--tint;
+    }
+    
+    &::after {
+      content: '';
+      flex: 0 0 100%;
+      border-bottom: $border__color solid 1px;
+      display: block;
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 0;
+    }
+    &:last-child {
+      &::after {
+        content: unset;
+      }
+    }
+    &-content {
+
+    }
+    &-code {
+      font-weight: $font-weight__semibold;
+      color: $color__primary--mid;
+      margin-bottom: calculateRem(5px);
+    }
+    &-img {
+      margin-left: 15px;
+      img {
+        vertical-align: top;
+      }
+      html[dir="rtl"] & {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+    }
+
+    .highlight-text {
+      color: $color__primary;
+    }
+  }
+}

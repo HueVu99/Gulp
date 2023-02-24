@@ -1,0 +1,221 @@
+@import "../../../../../core/scss/settings/variables";
+// overwrite variables
+$font-path: "/dist/ProductRegistration/aeg/au/assets/fonts/MetricWeb/";
+$images-path: "/dist/ProductRegistration/aeg/au/assets/images/";
+//main Colors --------------------------------
+$color__primary:           #cf132f;
+$color__primary--mid:      #99021d;// blue-mid
+$color__primary--light:    #adb9c3;// blue-light
+$color__primary--tint:     #21201f;// blue-tint
+
+$color__base:              #fff;
+$white:                    #fff;
+
+// typography
+$font-base:                 "MetricWeb";
+$font-family__base:        	Meiryo, Hiragino Sans, #{$font-base}, Microsoft YaHei, SimSun, Heiti SC, Roboto, Arial, sans-serif;
+$font-weight__base:        	400;
+$font-size__unit:           1rem;
+$font-size__base:          	$font-size__unit * 1.125;
+$font-size-md__base:        $font-size__unit * 1.25;
+$small__font-size:          $font-size__unit;
+$smallest__font-size:       $font-size__unit;
+$large__font-size:          $font-size__unit * 1.125;
+
+$font-weight__light:        300;
+$font-weight__medium:       500;
+$font-weight__semibold:     600;
+$font-weight__bold:         700;
+
+$font-strong__font-weight:  600;
+
+$line-height__base:         1.5;
+$line-height__small:        1.5;
+$line-height__smallest:     1.5;
+
+// Body
+$body__background-color:    #333;
+
+// Heading
+$heading__color:            #fff;
+$heading__font:             $font-base;
+$heading__font-weight:      $font-weight__light;
+$heading__text-transform:   initial;
+$h1__line-height:           1.2;
+$h2__line-height:           1.2;
+$h3__line-height:           1.3076;
+$h4__line-height:           1.2;
+$h5__line-height:           1.5;
+$h6__line-height:           1.5;
+
+$h1__font-size:             $font-size__unit * 2.125;
+$h2__font-size:             $font-size__unit * 2;
+$h3__font-size:             $font-size__unit * 1.625;
+$h4__font-size:             $font-size__unit * 1.5;
+$h5__font-size:             $font-size__unit * 1.5;
+$h6__font-size:             $font-size__unit * 1.375;
+
+// Heading Tablet
+$h1-tab__font-size:         $font-size__unit * 2.125;
+$h2-tab__font-size:         $font-size__unit * 2;
+$h3-tab__font-size:         $font-size__unit * 1.625;
+$h4-tab__font-size:         $font-size__unit * 1.5;
+$h5-tab__font-size:         $font-size__unit * 1.5;
+$h6-tab__font-size:         $font-size__unit * 1;
+// Heading Desktop
+$h1-pc__font-size:          $font-size__unit * 2.875;
+$h2-pc__font-size:          $font-size__unit * 2.5;
+$h3-pc__font-size:          $font-size__unit * 1.875;
+$h4-pc__font-size:          $font-size__unit * 1.625;
+$h5-pc__font-size:          $font-size__unit * 1.625;
+$h6-pc__font-size:          $font-size__unit * 1.375;
+// Heading xl screen
+$h1-xl__font-size:          $font-size__unit * 3.625;
+$h2-xl__font-size:          $font-size__unit * 2.75;
+$h3-xl__font-size:          $font-size__unit * 2.25;
+$h4-xl__font-size:          $font-size__unit * 1.875;
+$h5-xl__font-size:          $font-size__unit * 1.875;
+$h6-xl__font-size:          $font-size__unit * 1.5;
+
+$grid-columns: 12;
+$container__padding-x:      0.9375rem;
+$container__width:          73.75rem + 2*$container__padding-x;
+
+// border
+$border__width:             1px;
+$border__radius:            3px;
+$border__color:             $color__primary--tint;
+
+// input
+$input__border-color:       rgba(195, 195, 198, 0.15);
+$input__background-color:   $body__background-color;
+$input__border-width:       1px;
+$input__border-style:       solid;
+$input__padding-x:          1rem;
+$input__padding-y:          0.5rem;
+$input__font-size:          $font-size__base;
+$input__line-height:        $line-height__base;
+$input__color:              $color__base;
+$input__placeholder-color:  rgba($color__base, 0.6);
+$input__focus__border-color:$color__primary--light;
+$input__focus__box-shadow  :0 0 4px 4px rgb(1 30 65 / 10%);
+$input__invalid-color:     red;
+
+//btn
+$btn__border-color:         transparent;
+$btn__border-width:         1px;
+$btn__border-radius:        2px;
+$btn__font-size:            1rem;
+$btn__text-transform:       uppercase;
+$btn__font-weight:          300;
+
+//checkbox
+$checkbox__border-color:  rgba(255, 255, 255, 0.3);
+$checkbox__background-color:transparent;
+$checkbox__checkmark__border-color:$checkbox__border-color;
+$checkbox__checkmark-after__border-color:$color__primary;
+$checkbox__active__border-color:$color__primary;
+$checkbox__active__background-color:transparent;
+
+//dropdown
+$dropdown__background-color:$body__background-color;
+
+//slidebar
+$slidebar__background-color:$color__primary--tint;
+$slidebar__border-color:    $color__primary--mid;
+$slidebar__close__background-color:$color__primary;
+$slidebar__close__background-color--hover:$color__primary;
+$slidebar__help-text__background-color:#333;
+$slidebar__help-text-color: $color__base;
+
+//transition
+$transition-base:           all 0.3s linear 0s;
+
+//header
+$header__padding-y: 25px;
+$header-logo__width: 90px;
+$header-logo__height: 34px;
+
+//second-nav
+$second-nav__background-color:  $color__primary--tint;
+$second-nav__color:             $color__base;
+$second-nav__border-color:      $color__primary--light;
+$second-nav-item__border-color: $color__primary--light;
+
+//footer
+$footer__background-color:  #333;
+$footer__border-color:      $color__primary--tint;
+$footer__border-top-color:  $color__primary--tint;
+$footer__color:             #fff;
+$footer__font-size:         1rem;
+$footer__padding-y:         2.5rem;
+
+//index
+$dropdown-index:            100;
+$invisible-index:           -999;
+$slidebar-backdrop-index:   1000;
+$slidebar-index:            $slidebar-backdrop-index + 1;
+
+//background button hover 
+$color__btn--primary: $color__primary;
+$color__btn--hover: $color__primary--mid;
+
+// nav icon color
+$second-nav__icon--color: $color__base;
+
+// step color
+$step__item__height: 1.75rem;
+$step__item__border-width: 0.1875rem;
+$step__item__gap: 2.625rem;
+$step__item__bg-color: $color__primary--tint;
+$step__item--current__bg-color: $color__primary--tint;
+$step__item--passed__bg-color: $color__primary;
+$step__item--pass-border-color: $color__primary--tint;
+
+$step__number__bg-color: $color__primary--light;
+$step__number__color: #fff;
+$step__number--current__bg-color: $color__primary;
+$step__current-number-color: $step__number__color;
+$step__number--passed__color: $color__primary;
+$step__number--passed__bg-color: #fff;
+$step__number__font-size: $font-size__unit * 1.125;
+
+$step__label__color: $color__primary;
+$step__label--current__color: $color__primary;
+$step__label--passed__color: #fff;
+$step__horizontal-row-bg-color: $step__item__bg-color;
+$step__label__font-size: $small__font-size;
+
+// link hover color
+$link__hover-color: $color__base;
+$link__hover-opacity: .7;
+$link__decoration-color: $color__primary;
+
+//border color search result
+$border__color-search-result: $color__primary--light;
+
+// bullet
+$bullet__background-color: transparent;
+$bullet__border-color: $color__primary--mid;
+$bullet-active__background-color: $color__primary;
+$bullet-active__border-color: $color__primary;
+
+//section
+$section__heading-sp__font-size: $font-size__unit * 2.125;
+$section__heading__font-size: $font-size__unit * 2.75;
+$section__heading__font-weight: $font-weight__light;
+
+//footer link
+$footer__link--decoration: underline;
+$footer__link--color-hover: inherit;
+$footer__link--opacity: inherit;
+
+// arrow service support
+$arrow__service-color: $color__primary;
+$more-support__link-color: #fff;
+
+//privacy policy + term and condition color
+$privacy__color: $color__base;
+
+// icon complete color
+$icon__complete-color: #fff;

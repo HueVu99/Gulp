@@ -1,0 +1,123 @@
+$block: ".c_extended-warranty";
+
+#{$block} {
+  position: relative;
+
+  &__header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    position: relative;
+
+    picture {
+      width: 100%;
+    }
+
+    &-wrapper {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      padding-left: 17px;
+      height: 100%;
+      position: absolute;
+
+      @include lg {
+        position: static;
+        padding-left: 54px;
+        padding-top: 42px;
+      }
+
+      #{$block}__wrapper-text {
+        color: #fff;
+        font-size: 1.25rem;
+        line-height: 28px;
+        font-weight: 600;
+        margin: 0;
+        margin-left: 10px;
+      }
+    }
+
+    #{$block}__img-header {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include lg {
+      position: static;
+      flex-wrap: wrap;
+      &-wrapper {
+        #{$block}__wrapper-text {
+          font-size: 1.625rem;
+        }
+
+        img {
+          width: 54px;
+          height: 54px;
+        }
+      }
+
+      #{$block}__img-header {
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+
+  #{$block}__wrapper {
+    position: static;
+    // padding: 30px 0;
+
+    // @include lg {
+    //   padding: 42px 0 30px;
+    // }
+  }
+
+  &__body {
+    padding: 25px 20px 0;
+    @include lg {
+      color: #fff;
+      width: 40%;
+      padding: 42px 0 42px 54px;
+
+      &-title {
+        color: #fff;
+      }
+    }
+    &-title {
+      font-size: 1.25rem;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+
+    #{$block}__benefit {
+      padding-left: 20px;
+
+      li:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__img-large {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include lg {
+    // padding-left: 34px;
+
+    &__img-large {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    // &__wrapper {
+    //   padding-left: 54px;
+    // }
+  }
+}

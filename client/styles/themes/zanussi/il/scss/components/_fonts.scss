@@ -1,0 +1,5 @@
+// Web fonts
+// --------------------------------------------------
+$font-path: "/dist/ProductRegistration/zanussi/il/assets/fonts/Roboto/" !default;
+@include font-face($font-base, $font-path + "Roboto-Regular", 400, normal, woff2 woff);
+@include font-face($font-base, $font-path + "Roboto-Condensed-Bold", 600, normal, woff2 woff);

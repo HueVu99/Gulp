@@ -1,0 +1,88 @@
+$block: '.c_form';
+$errorColor: $input__invalid-color;
+
+
+$svg-cartman:'<svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7.60242 7L14 1" stroke="#{$color__base}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+#{$block} {
+  padding: 15px 0px;
+  @include md {
+    padding: 0;
+  }
+  &__group {
+    margin-bottom: 20px;
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+  }
+  &__control {
+    width: 100%;
+    padding: $input__padding-y $input__padding-x;
+    border: 1px solid $input__border-color;
+    background-color: $input__background-color;
+    border-radius: 0;
+    line-height: 1.5;
+    &:focus {
+      outline: 0;
+      border-color: $input__focus__border-color;
+      box-shadow: $input__focus__box-shadow;
+    }
+    &.has-error {
+      border-color: $errorColor;
+    }
+    &#{$block}__select {
+      padding-right: 40px;
+      @include background-svg($svg-cartman);
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      background-size: 13px 6px;
+
+      html[dir="rtl"] & {
+        padding-left: 40px;
+        padding-right: 1rem;
+        background-position: left 15px center;
+      }
+    }
+  }
+  &__error-message {
+    font-size: $smallest__font-size;
+    @include property("font-weight", $fontweight__err-message);
+    line-height: 24px;
+    color: $errorColor;
+  }
+  &__captcha {
+    // margin-bottom: 20px;
+    // margin-left: 15px;
+
+    &-error {
+      color: $errorColor
+    }
+  }
+  &__required {
+    
+  }
+  /* Chrome, Safari, Edge, Opera */
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+select#{$block}__control {
+  appearance: none;
+  background-color: $input__background-color;
+}

@@ -1,0 +1,21 @@
+mixin LoadingIndicator(small = false)
+  -if(small)
+    .lds-spinner&attributes(attributes)
+      div
+      div
+      div
+      div
+      div
+      div
+      div
+      div
+      div
+      div
+      div
+      div
+  -else
+    .loading-dots&attributes(attributes)
+      .loading-dots--dot.loading-dots__one
+      .loading-dots--dot.loading-dots__two
+      .loading-dots--dot.loading-dots__three
+      .loading-dots--dot.loading-dots__four

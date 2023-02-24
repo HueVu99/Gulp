@@ -1,0 +1,76 @@
+$section__gap: 2.5rem;
+$section__sub-gap: 1.5rem;
+$section-tab__gap: 3.4375rem;
+$section__head__max-width: 48.75rem;
+$heading__font-family: initial !default;
+$section__heading-sp__font-size: 2rem !default;
+$section__heading__font-size: 2.5rem !default;
+$section__heading__font-weight: 600 !default;
+$section: ".section";
+#{$section} {
+    margin-bottom: $section__gap;
+    @include md {
+        margin-bottom: $section-tab__gap;
+    }
+    &__head {
+        margin-bottom: $section__gap;
+        text-align: center;
+        @include md {
+            margin-bottom: $section-tab__gap;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-wrap {
+            max-width: $section__head__max-width;
+            margin: 0 auto;
+        }
+
+        &--small {
+            margin-bottom: $section__sub-gap;
+            @include md {
+                margin-bottom: $section-tab__gap;
+            }
+        }
+    }
+    
+    &__title {
+        font-size: $section__heading-sp__font-size;
+        font-weight: $section__heading__font-weight;
+        margin-bottom: 1.5625rem;
+        @if $heading__font-family != initial {
+            font-family: $heading__font-family;
+        }
+        @include md {
+            font-size: $section__heading__font-size;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__sub-title {
+        font-size: 1.25rem;
+        margin-bottom: 1.5625rem;
+        @include md {
+            font-size: 2rem;
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__summary {
+        // padding-top: 1.5625rem;
+    }
+    &#{$section}--inset {
+        margin-bottom: 0;
+        padding: $section__gap 0;
+        @include md {
+            margin-bottom: 0;
+            padding: $section-tab__gap 0;
+        }
+    }
+}

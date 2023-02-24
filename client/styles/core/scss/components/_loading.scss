@@ -1,0 +1,16 @@
+$c_loading: ".c_loading";
+
+#{$c_loading} {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $body__background-color; //rgba($color: #fff, $alpha: 0.5);
+  left: 0;
+  top: 0;
+  .c_icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

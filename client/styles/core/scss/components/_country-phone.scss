@@ -1,0 +1,228 @@
+$block: '.c_country-phone';
+$color-hover: $color__base;
+
+#{$block} {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  .c_select-box {
+    margin-right: 0px;
+    max-width: 115px;
+    flex: 0 0 115px;
+    text-transform: uppercase;
+    @include md {
+      margin-right: 10px;
+      max-width: 200px;
+      width: auto;
+      flex: 0;
+      html[dir="rtl"] & {
+        margin-left: 10px;
+        margin-right: 0;
+      }
+    }
+
+    button {
+      text-transform: uppercase;
+      &:focus {
+        outline: 0;
+        border-color: $color-hover;
+        box-shadow: 0 0 4px 4px rgb(1 30 65 / 10%);
+      }
+      &.disabled,
+      &:disabled {
+        cursor: no-drop;
+        opacity: 1;
+      }
+    }
+  }
+  ~.c_form__error-message {
+    @include md {
+      padding-left: 260px;
+    }
+  }
+  &__input-box {
+    position: relative;
+    width: 100%;
+    flex: 2;
+    margin-top: 0;
+    color: $color__base;
+    @include md {
+      flex: 1 1 0;
+      margin-top: 0px;
+    }
+    input {
+      padding-left: calculateRem(50px);
+
+      html[dir="rtl"] & {
+        padding-left: 0;
+        padding-right: calculateRem(50px);
+      }
+    }
+  }
+  &__area-code {
+    position: absolute;
+    left: 0;
+    color: $color__base;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+    padding-right: 5px;
+    text-align: right;
+    border-right: $input__border-color solid 1px;
+    width: calculateRem(46px);
+    margin-top: -1px;
+    html[dir="rtl"] & {
+      left: auto;
+      right: 0;
+      padding-left: 5px;
+      padding-right: 0;
+      text-align: left;
+      border-left: $border__color solid 1px;
+      border-right: none;
+    }
+  }
+  &__img {
+    background-image: url($images-path + "country-flags.png");
+    background-size: 8478px 22px;
+    background-repeat: no-repeat;
+    background-color: #DBDBDB;
+    height: 22px;
+    width: 30px;
+    background-position: 20px 0;
+    display: inline-block;
+    margin-right: 7px;
+    box-shadow: 0 0 1px $color-border;
+    html[dir="rtl"] & {
+      margin-left: 5px;
+      margin-right: 0;
+    }
+    &--ae {
+      height: 15px;
+      background-position: -66px 0px;
+    }
+
+    &--ar {
+      height: 19px;
+      background-position: -330px 0px;
+    }
+
+    &--au {
+      height: 15px;
+      background-position: -429px 0px;
+    }
+    
+    &--bh {
+      height: 18px;
+      background-position: -756px 0px;
+    }
+    &--cn {
+      height: 21px;
+      background-position: -1573px 0px;
+    }
+
+    &--eg {
+      height: 21px;
+      background-position: -2233px 0px;
+    }
+
+    &--hk {
+      height: 21px;
+      background-position: -3256px 0px;
+    }
+
+    &--il {
+      height: 22px;
+      background-position: -3553px 0px;
+    }
+
+    &--in {
+      height: 21px;
+      background-position: -3619px 0px;
+    }
+    &--iq {
+      height: 21px;
+      background-position: -3685px 0px;
+    }
+    &--jo {
+      height: 15px;
+      background-position: -3883px 0px;
+    }
+    &--jp {
+      height: 20px;
+      background-position: -3917px 0px;
+      width: 29px;
+      margin-right: 1px;
+    }    
+
+    &--kr {
+      height: 20px;
+      background-position: -4180px 0px;
+    }
+    &--kw {
+      height: 15px;
+      background-position: -4213px 0px;
+    }
+
+    &--ma {
+      height: 21px;
+      background-position: -4675px 0px;
+    }
+    &--my {
+      height: 15px;
+      background-position: -5367px 0px;
+    }
+    &--nz {
+      height: 15px;
+      background-position: -5782px 0px;
+    }
+    
+    &--om {
+      height: 15px;
+      background-position: -5815px 0px;
+    }
+
+    &--ph {
+      height: 15px;
+      background-position: -5980px 0px;
+    }
+
+    &--qa {
+      height: 12px;
+      background-position: -6310px 0px;
+    }
+
+    &--sa {
+      height: 21px;
+      background-position: -6508px 0px;
+    }
+
+    &--sg {
+      height: 21px;
+      background-position: -6673px 0px;
+    }
+        
+    &--th {
+      height: 21px;
+      background-position: -7366px 0px;
+    }
+    
+    &--tw {
+      height: 21px;
+      background-position: -7696px 0px;
+    }
+    
+    &--vn {
+      height: 21px;
+      background-position: -8151px 0px;
+    }
+    
+    &--za {
+      height: 21px;
+      background-position: -8382px 0px;
+    }    
+  }
+
+  @include md {
+    gap: 0;
+  }
+}

@@ -1,0 +1,6 @@
+mixin SelectBox(name, options, cusClass, defaultText='Sort By')
+  .selectbox.js_select-box(data-component="popup" data-target=name data-type="select" class=cusClass)
+    button.btn.selectbox__btn.js_selectbox__btn(type="button")= defaultText
+    .popup.selectbox__options-popup.js_selectbox__options(id=name)
+      each option in options
+        .selectbox__option.js_selectbox__option(data-key=option.value)= option.text

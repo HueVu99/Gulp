@@ -1,0 +1,54 @@
+$benefits-gap: 1rem;
+$benefits: ".c_benefits";
+#{$benefits} {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: -($benefits-gap*0.5);
+        margin-right: -($benefits-gap*0.5);
+        margin-top: -1.5rem;
+        @include md {
+            justify-content: center;
+        }
+    }
+    &-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        text-align: center;
+        padding-left: $benefits-gap*0.5;
+        padding-right: $benefits-gap*0.5;
+        margin-top: 1.5rem;
+        @include md {
+            flex: 0 0 33.33333333333333%;
+            max-width: 33.33333333333333%;
+        }
+        @include lg {
+            flex: 0 0 16.66666667%;
+            max-width: 16.66666667%;
+        }
+        &__img {
+            margin-bottom: 0.875rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img,
+            svg {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        &__text {
+            max-width: 180px;
+            margin: 0 auto;
+        }
+        &-title {
+            font-size: $font-size__base;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}

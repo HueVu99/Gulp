@@ -1,0 +1,5 @@
+// Web fonts
+// --------------------------------------------------
+$font-path: "/dist/ProductRegistration/electrolux/tw/assets/fonts/ElectroluxSans/" !default;
+@include font-face($font-base, $font-path + "ElectroluxSans_4_Semibold", 600, normal, eot woff2 woff ttf svg);
+@include font-face($font-base, $font-path + "ElectroluxSans_3_Regular", 400, normal, eot woff2 woff ttf);

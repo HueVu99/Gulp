@@ -1,0 +1,37 @@
+$c_complete: ".c_complete";
+
+#{$c_complete} {
+    border-bottom: $border__color solid 1px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    &__icon {
+        margin-bottom: 20px;
+        svg,
+        img {
+            height: 63px;
+            width: 63px;
+        }
+        svg {
+            circle {
+                @include property("stroke", $icon__complete-color);
+            }
+            g,
+            path {
+                @include property("fill", $icon__complete-color);
+            }
+        }
+        @include md {   
+            svg,
+            img {
+                height: 74px;
+                width: 74px;
+            }
+        }
+    }
+    &__title {
+        margin-bottom: 15px;
+    }
+    &__description {
+        margin-bottom: 30px;
+    }
+}

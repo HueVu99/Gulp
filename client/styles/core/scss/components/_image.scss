@@ -1,0 +1,33 @@
+$c_img: ".c_img";
+
+#{$c_img} {
+  margin-bottom: 30px;
+
+  &__picture {
+    display: block;
+    margin-bottom: 5px;
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+  }
+  &__caption {
+    @include font-size(14px);
+    font-weight: $font-weight__semibold;
+    text-align: center;
+  }
+}
+$c_img: ".c_media";
+#{$c_img} {
+  &__placeholder {
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

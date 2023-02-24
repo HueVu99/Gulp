@@ -1,0 +1,6 @@
+// Web fonts
+// --------------------------------------------------
+$font-path: "/dist/ProductRegistration/chef/au/assets/fonts/Futura/" !default;
+@include font-face($font-base, $font-path + "Futura-Bold", 600, normal, eot woff2 woff ttf svg);
+@include font-face($font-base, $font-path + "Futura-Book", 400, normal, eot woff2 woff ttf svg);
+@include font-face($font-base, $font-path + "Futura-Medium", 500, normal, eot woff2 woff ttf svg);

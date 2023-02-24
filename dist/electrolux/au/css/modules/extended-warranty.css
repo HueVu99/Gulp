@@ -1,0 +1,99 @@
+.c_extended-warranty {
+  position: relative;
+}
+.c_extended-warranty__header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  position: relative;
+}
+.c_extended-warranty__header picture {
+  width: 100%;
+}
+.c_extended-warranty__header-wrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding-left: 17px;
+  height: 100%;
+  position: absolute;
+}
+@media screen and (min-width: 992px) {
+  .c_extended-warranty__header-wrapper {
+    position: static;
+    padding-left: 54px;
+    padding-top: 42px;
+  }
+}
+.c_extended-warranty__header-wrapper .c_extended-warranty__wrapper-text {
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 28px;
+  font-weight: 600;
+  margin: 0;
+  margin-left: 10px;
+}
+.c_extended-warranty__header .c_extended-warranty__img-header {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 992px) {
+  .c_extended-warranty__header {
+    position: static;
+    flex-wrap: wrap;
+  }
+  .c_extended-warranty__header-wrapper .c_extended-warranty__wrapper-text {
+    font-size: 1.625rem;
+  }
+  .c_extended-warranty__header-wrapper img {
+    width: 54px;
+    height: 54px;
+  }
+  .c_extended-warranty__header .c_extended-warranty__img-header {
+    position: absolute;
+    z-index: -1;
+  }
+}
+.c_extended-warranty .c_extended-warranty__wrapper {
+  position: static;
+}
+.c_extended-warranty__body {
+  padding: 25px 20px 0;
+}
+@media screen and (min-width: 992px) {
+  .c_extended-warranty__body {
+    color: #fff;
+    width: 40%;
+    padding: 42px 0 42px 54px;
+  }
+  .c_extended-warranty__body-title {
+    color: #fff;
+  }
+}
+.c_extended-warranty__body-title {
+  font-size: 1.25rem;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.c_extended-warranty__body .c_extended-warranty__benefit {
+  padding-left: 20px;
+}
+.c_extended-warranty__body .c_extended-warranty__benefit li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.c_extended-warranty__img-large {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 992px) {
+  .c_extended-warranty__img-large {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+/*# sourceMappingURL=../maps/modules/extended-warranty.css.map */

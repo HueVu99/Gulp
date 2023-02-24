@@ -1,0 +1,53 @@
+{
+  "headerText": "Recommended for you",
+  "recommendations": [
+    {
+      "promotionLabel": "",
+      "partCode": "au_1254250010_part",
+      "partTitle": "BUSH SUPPORT ROLLER",
+      "partNumber": "1254250010",
+      "partImage": "https://d3oxsuk3vvw3rq.cloudfront.net/assets/images/000/013/385/normal/cross.png",
+      "partUrl": "/part/dryers-pin-bushsupportroller-1254250010",
+      "partCategories": "BUSH, ACCESSORIES",
+      "instock": "In-stock (9)",
+      "realPrice": "$3.95",
+      "discountPrice": "$3.95",
+      "variationCode": "au_1254250010_part_sku",
+      "prefixPrice": false,
+      "isSuperseded": false,
+      "isInStock": true
+    },
+    {
+      "promotionLabel": "",
+      "partCode": "au_1364090611_part",
+      "partTitle": "CABLE POWER  WITH FILTER ",
+      "partNumber": "1364090611",
+      "partImage": "https://d3oxsuk3vvw3rq.cloudfront.net/assets/images/000/013/557/normal/cross.png",
+      "partUrl": "/part/dryers-cablepowerwithfilter-1364090611",
+      "partCategories": "CORD, ACCESSORIES",
+      "instock": "In-stock (4)",
+      "realPrice": "$65.95",
+      "discountPrice": "$65.95",
+      "variationCode": "au_1364090611_part_sku",
+      "prefixPrice": false,
+      "isSuperseded": false,
+      "isInStock": true
+    },
+    {
+      "promotionLabel": "",
+      "partCode": "au_1366016002_part",
+      "partTitle": "SUPPORT REINFORCEMENT MIDDLE TOP",
+      "partNumber": "1366016002",
+      "partImage": "https://d3oxsuk3vvw3rq.cloudfront.net/assets/images/000/021/854/normal/cross.png",
+      "partUrl": "/part/dryers-support-supportreinforcementmiddletop-1366016002",
+      "partCategories": "SUPPORT, ACCESSORIES",
+      "instock": "In-stock (5)",
+      "realPrice": "$27.50",
+      "discountPrice": "$27.50",
+      "variationCode": "au_1366016002_part_sku",
+      "prefixPrice": false,
+      "isSuperseded": false,
+      "isInStock": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+.c_qrcode {
+    text-align: center;
+    @include md {
+        text-align: left;
+
+        html[dir="rtl"] & {
+            text-align: right;
+        }
+    }
+    &-control {
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+        input[type="file"] {
+            display: none;
+        }
+    }
+}

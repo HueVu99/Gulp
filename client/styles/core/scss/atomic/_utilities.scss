@@ -1,0 +1,122 @@
+@use "sass:math";
+// border
+// ---------------------------
+.border-left {
+  border-left: $border__color solid 1px;
+}
+.border-right {
+  border-right: $border__color solid 1px;
+}
+
+@include md {
+  .border-md-left {
+    border-left: $border__color solid 1px;
+  }
+  .border-md-right {
+    border-right: $border__color solid 1px;
+  }
+}
+
+// text align
+// ---------------------------
+.text-center {
+  text-align: center;
+}
+@include md {
+  .text-md-left {
+    text-align: left;
+  }
+  .text-md-right {
+    text-align: right;
+  }
+}
+
+// text
+// ---------------------------
+.text-xs {
+  font-size: $smallest__font-size;
+}
+.text-sm {
+  font-size: $small__font-size;
+}
+.text-lg {
+  font-size: $large__font-size;
+}
+
+// display
+// ---------------------------
+.d-none {
+  display: none;
+}
+
+@include md {
+  .d-md-none {
+    display: none;
+  }
+  .d-md-block {
+    display: block;
+  }
+}
+
+// margin
+// ---------------------------
+@for $i from 0 through 4 {
+  $margin: math.div($i * 10, 16);
+  .mb-#{$i*10} {
+    margin-bottom: #{$margin}rem;
+  }
+}
+@include md {
+  @for $i from 0 through 4 {
+    $margin: math.div($i * 10, 16);
+    .mb-md-#{$i*10} {
+      margin-bottom: #{$margin}rem;
+    }
+  }
+}
+
+// padding
+// ---------------------------
+@for $i from 0 through 4 {
+  $padding: math.div($i * 10, 16);
+  .pt-#{$i*10} {
+    padding-top: #{$padding}rem;
+  }
+  .pb-#{$i*10} {
+    padding-bottom: #{$padding}rem;
+  }
+}
+@include md {
+  @for $i from 0 through 4 {
+    $padding: math.div($i * 10, 16);
+    .pt-md-#{$i*10} {
+      padding-top: #{$padding}rem;
+    }
+    .pb-md-#{$i*10} {
+      padding-bottom: #{$padding}rem;
+    }
+  }
+}
+
+$font-weight: 600;
+@each $weight in $font-weight {
+  .fw-#{$weight} {
+    font-weight: 600;
+  }
+}
+
+// width
+// ---------------------------
+.width-100 {
+  width: 100%;
+}
+.none-visible {
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  opacity: 0;
+}

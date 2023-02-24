@@ -1,0 +1,58 @@
+$second-nav: ".second-nav";
+#{$second-nav} {
+    padding: 8px 0;
+    background-color: $second-nav__background-color;
+    color: $second-nav__color;
+    font-size: $small__font-size;
+    @include md {
+        font-size: $font-size__base;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 8px 0;
+        @include md {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-right: 40px;
+            border-right: $second-nav-item__border-color solid 1px;
+            text-align: right;
+            & + #{$second-nav}__item {
+                padding-left: 40px;
+                padding-right: 0;
+                border-right: none;
+                text-align: left;
+            }
+
+            html[dir="rtl"] & {
+                padding-left: 40px;
+                border-left: $second-nav__border-color solid 1px;
+                padding-right: 0;
+                border-right: none;
+                text-align: left;
+                & + #{$second-nav}__item {
+                    padding-left: 0;
+                    padding-right: 40px;
+                    border-left: none;
+                    text-align: right;
+                }
+            }
+        }
+    }
+    .c_icon {
+        &-svg {
+            circle {
+                stroke: $second-nav__color;
+            }
+            g,
+            path {
+                fill: $second-nav__color;
+            }
+        }
+    }
+}

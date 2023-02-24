@@ -1,0 +1,33 @@
+$c_howdo: ".c_howdo";
+
+#{$c_howdo} {
+  &__cat-title {
+    margin-bottom: 20px;
+  }
+  &__cat-summary {
+    margin-bottom: 35px;
+  }
+  &__product-img {
+    // display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+  }
+
+  &__help-text {
+    font-size: $small__font-size;
+    background-color: $slidebar__help-text__background-color;
+    padding: 20px;
+  }
+}
